@@ -1,8 +1,10 @@
+# Author: Di Huang
+
 .data
 
-#################
-# INPUT instructions
-#################
+######################
+# INPUT instructions #
+######################
 # number of input instructions = 4
 ni: .word 4
 # bge $t0, $zero, label2
@@ -15,7 +17,7 @@ TestInput: .word 101 0 8 0 0 0 0 0 2
 .word 1 0 18 11 0x8000 0 0 0 0
 
 #####################
-# Phase 1 test case
+# Phase 1 test case #
 #####################
 # slt $at, $t0, $zero
 # beq $at, $zer0, label2
@@ -36,9 +38,9 @@ Phase1Test: .word 8 1 8 0 0 0 0 0 0
 .word 10 0 1 1 0x8000 0 0 0 0
 Phase1TestLast: .word 2 11 18 1 0 0 0 0 0
 
-#######################
-# Phase 2 test case
-#######################
+#####################
+# Phase 2 test case #  
+#####################
 Phase2Test: .word 8 1 8 0 0 0 0 0 0
 # translated label1 to immediate
 .word 5 0 1 0 0x00000003 0 0 0 2
@@ -51,12 +53,9 @@ Phase2Test: .word 8 1 8 0 0 0 0 0 0
 Phase2TestLast: .word 2 11 18 1 0 0 0 0 0
 
 .text
-###################
-# Phase 3 test case
-###################
-# These instructions are in .text section because they
-# will be translated by MARS, and then we
-# will compare the binary code MARS outputed to phase 3 output
+#####################
+# Phase 3 test case #
+#####################
 Phase3Test:
 bge $t0, $zero, Phase3TestLabel2 # Phase3Test = label1
 Phase3TestLabel1: ori $t1, $s0, 0xffffffff

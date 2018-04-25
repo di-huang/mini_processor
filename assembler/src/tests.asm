@@ -1,3 +1,5 @@
+# Author: Di Huang
+
 .data
 	# showing the title of the test case
 	mesg:	.asciiz "---test1---\n"
