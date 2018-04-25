@@ -1,3 +1,5 @@
+# Author: Di Huang
+
 .macro setTop4Digits(%opcode, %rs, %rt)
     addu $t0, $0, %opcode
     addu $t1, $0, %rs

@@ -1,3 +1,5 @@
+# Author: Di Huang
+
 resolve_address: # (instr(a0), pc_of_instr(a1), label_map(a2))
     subiu $sp, $sp, 16
     sw $ra, ($sp)

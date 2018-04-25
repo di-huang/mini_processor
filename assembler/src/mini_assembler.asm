@@ -1,3 +1,5 @@
+# Author: Brandon Myers
+
 # class Instruction {    // byte offsets
 #   int instruction_id;   // 0
 #   int rd;               // 4
